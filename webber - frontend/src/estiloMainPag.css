@@ -1,0 +1,198 @@
+:root {
+    --negro : #060606;
+    --grisaceo : #20282e;
+    --gris : #415261;
+    --azulgrisaceo : #688599;
+    --azul : #92bbd9;
+    --verdefluor : #7AFD55;
+    --colorfondo : rgb(7,39,50);
+  }
+  
+  body {
+    box-sizing: border-box;
+    /*background-color: rgb(1, 0, 59);*/
+    background-color: var(--negro);
+    color: #aaa;
+    /*overflow-y:scroll;
+    overflow-x: hidden;
+    scrollbar-width: auto;*/
+  }
+
+  .mainpag {
+    display: flex;
+    width: 100vw;
+    height: 85vh;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: webber;
+    animation-duration: 1.5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  .imgfondopag {
+    width: 45vw;
+    height: auto;
+    object-fit:contain;
+    margin: 2.5vw;
+  /*border: 1px solid #222;
+  box-shadow: 2px 4px 4px 0 #000;*/
+  }
+
+.titulo {
+  width: 45vw;
+  font-size: 2vw;
+  background-color: var(--colorfondo); /* gris */
+  padding: .25vw 1.75vw .25vw 1.75vw;
+  border: 1px solid var(--azulgrisaceo);
+  border-radius: 2px;
+  text-align: center;
+}
+
+.titulo b {
+  text-shadow: 3px 3px 1px var(--azulgrisaceo);
+}
+
+.cuerpo{
+  text-align: justify;
+  /*width: 70vw; */
+  /*background-color: var(--azul);*/
+  color: #aaa;
+  border: 1px solid #222;
+  box-shadow: 2px 4px 4px 0 #000;
+  padding: 12px;
+}
+
+.precios {
+    display: flex;
+    justify-content:space-between;
+}
+
+.dolar, .pesos {
+    background-color: white;
+    min-height: 30px;
+    padding: 3px .3vw 3px .3vw;
+    border: 2px solid var(--grisaceo);
+    border-radius: 6px 6px 6px 6px;
+    font-size: 1.5vw;
+    color: #222;
+}
+
+.dolar {
+    background-color: green;
+}
+
+.pesos {
+    background-color: #688599;
+}
+
+.content a {
+    display: flex;
+    justify-content: center;
+    /*flex-grow: 1;*/
+    text-decoration: none;
+    color:#aaa;
+    padding: 1vw 3vw 1vw 3vw;
+    margin: 4vw;
+    background-color: var(--colorfondo);
+    border: 2px solid var(--azulgrisaceo);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.img {
+    background-image: url(./imagenes/universo-neuronal-740x493-reduced.jpg);
+    width: 100vw;
+    height: 85vh;
+    filter: blur(2px) brightness(0.3);
+    background-size: cover;
+}
+
+
+
+.form {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  border: 2px solid var(--colorfondo);
+  padding: .5vw;
+  grid-gap: .5vw;
+}
+
+.form__child {
+  box-sizing: border-box;
+}
+
+.textarea{
+  resize: none;
+  grid-column: 1 / 3;
+  grid-row: 3 / 5;
+}
+
+.labelPedido {
+  grid-column: 1 / 3;
+}
+
+.enviar {
+  grid-column: 1 / 3;
+}
+
+.img--servicio{
+  width: 45vw;
+  height: auto;
+  object-fit: contain;
+  margin: 0 2.4vw 0 2.4vw;
+}
+
+@media screen and (max-width:1065px) {
+    .mainpag {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mainpag img {
+        width: 70vw;
+        margin-top: 8vh;
+    }
+
+    .content{
+        align-items: center;
+    }
+
+    .titulo {
+        width: 90vw;
+        font-size: 4vw;
+    }
+
+    .precios {
+        width: 90vw;
+    }
+
+    .dolar, .pesos {
+      font-size: 2.5vw;
+    }
+
+    .dolar b, .pesos b {
+        font-size: 3vw;
+    }
+
+    .form {
+      width: 90vw;
+    }
+}
+
+@keyframes webber {
+    from {
+      opacity:0;
+    }
+    to {
+      opacity:1;
+    }
+  }

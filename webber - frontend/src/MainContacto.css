@@ -1,0 +1,74 @@
+:root {
+    --negro : #060606;
+    --grisaceo : #20282e;
+    --gris : #415261;
+    --azulgrisaceo : #688599;
+    --azul : #92bbd9;
+    --verdefluor : #7AFD55;
+    --colorfondo : rgb(7,39,50);
+  }
+  
+  /*body {
+    box-sizing: border-box;
+    background-color: rgb(1, 0, 59);
+    background-color: var(--negro);
+    color: #aaa;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    scrollbar-width: auto;
+  }*/
+
+  .imgfondocontacto {
+    background-image: url(./imagenes/universo-neuronal-740x493.jpg);
+    width: 70vw;
+    height: 70vh;
+    filter: blur(2px) brightness(0.3);
+    background-size: cover;
+  }
+
+  .maincontacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    height: 70vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h2 {
+    border: 1px solid var(--grisaceo);
+    padding: 4px 4px 4px 4px;
+  }
+
+  /*main {
+    opacity: 0;
+    animation: webber;
+    animation-duration: 1.5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }*/
+
+  /*@keyframes webber {
+    from {
+      opacity:0;
+    }
+    to {
+      opacity:1;
+    }
+  }*/
+
+  @media screen and (max-width: 550px) {
+    h1 {
+      font-size: 7vw;
+    }
+    label {
+      font-size: 3vw;
+    }
+    h2 {
+      font-size: 4vw;
+    }
+  }
